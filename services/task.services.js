@@ -1,5 +1,11 @@
 const { validateFieldsCreateTask } = require('../utils/joiValidations');
-const { createTaskModel } = require('../models/task.models');
+const { createTaskModel, findAllTasksModel } = require('../models/task.models');
+
+const findAllTasksService = async (taskName, createdDate, status) => {
+  const allTasks = await findAllTasksModel();
+
+  return allTasks;
+};
 
 const createTaskService = async (taskName, createdDate, status) => {
   validateFieldsCreateTask(taskName, createdDate, status);
@@ -9,4 +15,4 @@ const createTaskService = async (taskName, createdDate, status) => {
   return { taskName, createdDate, status };
 };
 
-module.exports = { createTaskService };
+module.exports = { createTaskService, findAllTasksService };
