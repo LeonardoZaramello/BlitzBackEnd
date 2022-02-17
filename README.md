@@ -1,4 +1,4 @@
 # BlitzBackEnd
 Repositório criado para a sessão de Blitz da Trybe.
 
-repo backEnd: https://github.com/LeonardoZaramello/BlitzFrontEnd
+repo FrontEnd: https://github.com/LeonardoZaramello/BlitzFrontEnd
