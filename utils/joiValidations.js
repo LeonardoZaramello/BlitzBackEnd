@@ -7,7 +7,7 @@ const regexDate = /^(0?[1-9]|[12][0-9]|3[01])[\/](0?[1-9]|1[012])[\/]\d{4}$/
 const createTaskSchema = Joi.object({
   taskName: Joi.string().min(1).required(),
   createdDate: Joi.string().min(1).regex(regexDate).required(),
-  status: Joi.string().valid('Pendente', 'Andamento', 'Pronto').required(),
+  status: Joi.string().valid('Pending', 'In Progress', 'Done').required(),
 });
 
 const validateFieldsCreateTask = (taskName, createdDate, status) => {
